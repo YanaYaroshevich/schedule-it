@@ -9,7 +9,7 @@ export class IntroComponent implements OnInit {
 
     constructor() { }
 
-    ngOnInit(): void {
-        //this.page.actionBarHidden = true;
-    }
+	ngOnInit(): void {
+		//this.page.actionBarHidden = true;
+	}
 }
