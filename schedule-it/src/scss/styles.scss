@@ -1,0 +1,10 @@
+@import 'vars/fonts';
+@import 'vars/colors';
+
+* {
+	@include font-smoothing();
+}
+
+html {
+	font-size: 12px;
+}
