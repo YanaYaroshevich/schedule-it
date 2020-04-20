@@ -5,7 +5,7 @@ import { Page } from "tns-core-modules/ui/page/page";
     selector: "intro",
     moduleId: module.id,
     templateUrl: "./intro.component.html",
-    styleUrls: ["./intro.component.css"]
+    styleUrls: ["./intro.component.scss"]
 })
 export class IntroComponent implements OnInit {
 
