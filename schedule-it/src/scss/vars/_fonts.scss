@@ -1,4 +1,70 @@
+@import 'vars/colors';
+
+$quicksand-font: Quicksand, sans-serif;
+$montserrat-font: Montserrat, sans-serif;
+
 @mixin font-smoothing {
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
+}
+
+// Biggest title
+%big-title {
+	color: map-get($font, 'primary');
+	font-family: $quicksand-font;
+	font-size: 3.5rem;
+	font-style: normal;
+	font-weight: 400;
+	line-height: 4.3rem;
+}
+
+// Section heading
+%section-title {
+	color: map-get($font, 'primary');
+	font-family: $quicksand-font;
+	font-size: 2.7rem;
+	font-style: normal;
+	font-weight: 400;
+	line-height: 3.3rem;
+}
+
+// Sub-section or widget title
+%widget-title {
+	color: map-get($font, 'primary');
+	font-family: $quicksand-font;
+	font-size: 2rem;
+	font-style: normal;
+	font-weight: 700;
+	line-height: 2.5rem;
+}
+
+// Item title inside widgets
+%item-title {
+	color: map-get($font, 'primary');
+	font-family: $quicksand-font;
+	font-size: 1.6rem;
+	font-style: normal;
+	font-weight: 700;
+	line-height: 2rem;
+}
+
+// body text which is used for most of the design, like paragraphs, lists, etc.
+%body {
+	color: map-get($font, 'secondary');
+	font-family: $montserrat-font;
+	font-style: normal;
+	font-weight: 300;
+	font-size: 1.2rem;
+	line-height: 2rem;
+}
+
+// label or CTA text
+%label {
+	color: map-get($font, 'secondary');
+	font-family: $montserrat-font;
+	font-style: normal;
+	font-weight: 700;
+	font-size: 1rem;
+	line-height: 1.25rem;
+	text-transform: uppercase;
 }

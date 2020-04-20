@@ -1,4 +1,7 @@
 $white: #fff;
 $black: #000;
 
-$font-primary: #1F2041;
+$font: (
+	'primary': #1F2041,
+	'secondary': rgba(31, 32, 65, 0.75)
+);
