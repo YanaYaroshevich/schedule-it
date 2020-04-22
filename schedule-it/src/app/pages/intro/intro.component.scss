@@ -1,24 +1,21 @@
+@import '../../../scss/vars/colors';
+
 #slide1 {
-	background: linear-gradient(45deg, #eb3349, #f45c43);
+	background: map-get($gradient, 'purple');
 	vertical-align: center;
 }
 
 #slide2 {
-	background: linear-gradient(-45deg, #93f9b9, #1d976c);
+	background: map-get($gradient, 'green');
 	vertical-align: center;
 }
 
 #slide3 {
-	background: linear-gradient(45deg, #1d2b64, #f8cdda);
+	background: map-get($gradient, 'purple');
 	vertical-align: center;
 }
 
 #slide4 {
-	background: linear-gradient(bottom, #003973, #e5e5be);
+	background: map-get($gradient, 'green');
 	vertical-align: center;
-}
-
-.carousel-layout-fix {
-	padding: 0.1px 0;
-	margin: -0.1px 0;
 }
