@@ -1,10 +1,11 @@
 @import 'vars/fonts';
 @import 'vars/colors';
+@import 'vars/sizes';
 
 * {
 	@include font-smoothing();
 }
 
 html {
-	font-size: 12px;
+	font-size: ($rem-size)px;
 }

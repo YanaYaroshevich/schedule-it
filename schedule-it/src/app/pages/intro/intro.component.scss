@@ -1,14 +1,21 @@
-@import '../../../scss/vars/colors';
+@import '../../../scss/vars/fonts';
+@import '../../../scss/vars/decorations';
 
-#slide1,
-#slide3,
-#slide5 {
-	background: map-get($gradient, 'purple');
-	vertical-align: center;
-}
+:host {
+	#slide1,
+	#slide3,
+	#slide5 {
+		background: map-get($gradient, 'purple');
+		vertical-align: center;
+	}
 
-#slide2,
-#slide4 {
-	background: map-get($gradient, 'green');
-	vertical-align: center;
+	#slide2,
+	#slide4 {
+		background: map-get($gradient, 'green');
+		vertical-align: center;
+	}
+
+	.slide-text {
+		@extend %section-title;
+	}
 }

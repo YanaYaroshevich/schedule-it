@@ -10,7 +10,7 @@ import {Carousel, CarouselItem} from 'nativescript-carousel';
 import * as applicationModule from '@nativescript/core/application';
 import * as imageModule from 'nativescript-image';
 import {TNSImageModule} from 'nativescript-image/angular';
-
+import {NativeScriptSvgModule} from 'nativescript-svg/angular';
 
 // Uncomment and add to NgModule imports if you need to use two-way binding
 // import { NativeScriptFormsModule } from 'nativescript-angular/forms';
@@ -30,7 +30,7 @@ if (applicationModule.android) {
 
 @NgModule({
 	declarations: [AppComponent, HomeComponent],
-	imports: [NativeScriptModule, AppRoutingModule, IntroModule, TNSImageModule],
+	imports: [NativeScriptModule, AppRoutingModule, IntroModule, TNSImageModule, NativeScriptSvgModule],
 	providers: [],
 	bootstrap: [AppComponent],
 	schemas: [NO_ERRORS_SCHEMA]

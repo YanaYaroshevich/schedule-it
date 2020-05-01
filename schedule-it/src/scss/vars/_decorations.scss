@@ -1,0 +1,5 @@
+@import './sizes';
+
+@mixin getRemInPx($property, $rems) {
+	#{$property}: ($rems * $rem-size)px;
+}
