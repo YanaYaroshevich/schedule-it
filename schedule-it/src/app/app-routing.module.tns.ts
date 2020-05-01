@@ -6,15 +6,8 @@ import { TNSImageModule } from 'nativescript-image/angular';
 import * as imageModule from 'nativescript-image';
 import * as applicationModule from '@nativescript/core/application';
 
-if (applicationModule.android) {
-	applicationModule.on(applicationModule.launchEvent, () => {
-		console.log('initialize pipeline');
-		imageModule.initialize();
-	});
-}
-
 @NgModule({
-	imports: [NativeScriptRouterModule.forRoot(routes), TNSImageModule],
+	imports: [NativeScriptRouterModule.forRoot(routes)],
 	exports: [NativeScriptRouterModule]
 })
 export class AppRoutingModule {}

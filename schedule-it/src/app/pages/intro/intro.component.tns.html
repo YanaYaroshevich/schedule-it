@@ -17,50 +17,23 @@
 		android:indicatorAnimation="WORM"
 	>
 		<CarouselItem id="slide1" verticalAlignment="middle">
-			<label text="Each slide is defined in the XML." textWrap="true" margin="30"></label>
-			<label text="Slide 1" horizontalAlignment="center"></label>
-
-			<label
-				text="Wrap the Carousel in a GridLayout in order to place the indicator on top (android)"
-				textWrap="true"
-				margin="30"
-				ios:visibility="collapsed"
-			></label>
+			<SVGImage horizontalAlignment="center" src="~/app/images/svg/welcome.svg"></SVGImage>
 		</CarouselItem>
 
 		<CarouselItem id="slide2" verticalAlignment="middle">
-			<label
-				text="'finite' is set to False. Carousel will not stop at the last slide"
-				textWrap="true"
-				margin="30"
-				android:visibility="collapsed"
-			></label>
-			<label
-				text="Indicator animation type: 'WORM'"
-				textWrap="true"
-				ios:visibility="collapsed"
-				margin="30"
-			></label>
-			<label text="Slide 2" horizontalAlignment="center"></label>
-			<NSImg #imageView
-				   verticalAlignment="center"
-				   placeholderImageUri="res://ns_logo"
-				   src="https://raw.githubusercontent.com/Akylas/nativescript-image/master/examples-data/breakfast1.jpg">
-			</NSImg>
+			<SVGImage horizontalAlignment="center" src="~/app/images/svg/plan.svg"></SVGImage>
 		</CarouselItem>
 
 		<CarouselItem id="slide3" verticalAlignment="middle">
-			<label
-				text="Carousel can be used in fullscreen, just set height to 100%"
-				textWrap="true"
-				margin="30"
-			></label>
-			<label text="Slide 3" horizontalAlignment="center"></label>
+			<SVGImage horizontalAlignment="center" src="~/app/images/svg/settings 2.svg"></SVGImage>
 		</CarouselItem>
 
 		<CarouselItem id="slide4" verticalAlignment="middle">
-			<label text="Enjoy using the Carousel plugin :)" textWrap="true" margin="30"></label>
-			<label text="Slide 4" horizontalAlignment="center"></label>
+			<SVGImage horizontalAlignment="center" src="~/app/images/svg/payment.svg"></SVGImage>
+		</CarouselItem>
+
+		<CarouselItem id="slide5" verticalAlignment="middle">
+			<SVGImage horizontalAlignment="center" src="~/app/images/svg/success.svg"></SVGImage>
 		</CarouselItem>
 	</Carousel>
 </GridLayout>
