@@ -1,0 +1,30 @@
+@import './decorations';
+@import './fonts.tns';
+
+@mixin buttonDefaultTns($gradientColor) {
+	$border-radius: 21;
+
+	@extend %label;
+	@include buttonDefault($gradientColor);
+	border-radius: $border-radius;
+	padding: $border-radius;
+
+	&:active {
+		opacity: 0.5;
+	}
+}
+
+@mixin buttonBorderedTns($gradientColor) {
+	$border-radius: 21;
+	$border-width: 2;
+
+	@extend %label;
+	@include buttonBordered($gradientColor);
+	border-width: $border-width;
+	border-radius: $border-radius;
+	padding: $border-radius;
+
+	&:active {
+		opacity: 0.5;
+	}
+}

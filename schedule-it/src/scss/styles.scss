@@ -1,11 +1,12 @@
-@import 'vars/fonts';
-@import 'vars/colors';
-@import 'vars/sizes';
+@mixin font-smoothing {
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
 
 * {
 	@include font-smoothing();
 }
 
 html {
-	font-size: ($rem-size)px;
+	font-size: 12px;
 }

@@ -1,4 +1,5 @@
 import {ChangeDetectionStrategy, Component, OnInit} from '@angular/core';
+import {Router} from '@angular/router';
 
 @Component({
 	selector: 'intro',
@@ -7,9 +8,13 @@ import {ChangeDetectionStrategy, Component, OnInit} from '@angular/core';
 	changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class IntroComponent implements OnInit {
-	constructor() {}
+	constructor(private router: Router) {}
 
 	ngOnInit(): void {
 		//this.page.actionBarHidden = true;
+	}
+
+	onSubmitBtn(): void {
+		this.router.navigate(['/home']);
 	}
 }

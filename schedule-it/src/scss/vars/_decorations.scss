@@ -1,5 +1,24 @@
-@import './sizes';
+@import './colors';
 
-@mixin getRemInPx($property, $rems) {
-	#{$property}: ($rems * $rem-size)px;
+/*---------- Buttons ----------*/
+
+@mixin buttonDefault($gradientColor) {
+	background: map-get($gradient, $gradientColor);
+	color: $white;
+	cursor: pointer;
+
+	&:hover {
+		opacity: 0.5;
+	}
+}
+
+@mixin buttonBordered($gradientColor) {
+	background: $white;
+	border-color: map-get($palette, $gradientColor);
+	color: map-get($palette, $gradientColor);
+	cursor: pointer;
+
+	&:hover {
+		opacity: 0.5;
+	}
 }

@@ -1,12 +1,12 @@
 @import './colors';
+@import './mixins.tns';
 
 $quicksand-font: Quicksand, sans-serif;
 $montserrat-font: Montserrat, sans-serif;
 
-// Biggest title
 %big-title {
-	font-size: 3.5rem;
-	line-height: 4.3rem;
+	@include getRemInDp(font-size, 3.5);
+	@include getRemInDp(line-height, 4.3);
 	color: map-get($font, 'primary');
 	font-family: $quicksand-font;
 	font-style: normal;
@@ -15,8 +15,8 @@ $montserrat-font: Montserrat, sans-serif;
 
 // Section heading
 %section-title {
-	font-size: 2.7rem;
-	line-height: 3.3rem;
+	@include getRemInDp(font-size, 2.7);
+	@include getRemInDp(line-height, 3.3);
 	color: map-get($font, 'primary');
 	font-family: $quicksand-font;
 	font-style: normal;
@@ -25,8 +25,8 @@ $montserrat-font: Montserrat, sans-serif;
 
 // Sub-section or widget title
 %widget-title {
-	font-size: 2rem;
-	line-height: 2.5rem;
+	@include getRemInDp(font-size, 2);
+	@include getRemInDp(line-height, 2.5);
 	color: map-get($font, 'primary');
 	font-family: $quicksand-font;
 	font-style: normal;
@@ -35,8 +35,8 @@ $montserrat-font: Montserrat, sans-serif;
 
 // Item title inside widgets
 %item-title {
-	font-size: 1.6rem;
-	line-height: 2rem;
+	@include getRemInDp(font-size, 1.6);
+	@include getRemInDp(line-height, 2);
 	color: map-get($font, 'primary');
 	font-family: $quicksand-font;
 	font-style: normal;
@@ -45,8 +45,8 @@ $montserrat-font: Montserrat, sans-serif;
 
 // body text which is used for most of the design, like paragraphs, lists, etc.
 %body {
-	font-size: 1.2rem;
-	line-height: 2rem;
+	@include getRemInDp(font-size, 1.2);
+	@include getRemInDp(line-height, 2);
 	color: map-get($font, 'secondary');
 	font-family: $montserrat-font;
 	font-style: normal;
@@ -55,8 +55,8 @@ $montserrat-font: Montserrat, sans-serif;
 
 // label or CTA text
 %label {
-	font-size: 1rem;
-	line-height: 1.25rem;
+	@include getRemInDp(font-size, 1);
+	@include getRemInDp(line-height, 1.25);
 	color: map-get($font, 'secondary');
 	font-family: $montserrat-font;
 	font-style: normal;
