@@ -7,3 +7,7 @@ import { ChangeDetectionStrategy, Component } from "@angular/core";
 	changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class AppComponent {}
+
+
+const a = 3;
+// Comment BBBB
