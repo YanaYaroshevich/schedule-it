@@ -2,7 +2,7 @@
 
 /*---------- Buttons ----------*/
 
-@mixin buttonDefault($gradientColor) {
+@mixin button-default($gradientColor) {
 	background: map-get($gradient, $gradientColor);
 	color: $white;
 	cursor: pointer;
@@ -12,7 +12,7 @@
 	}
 }
 
-@mixin buttonBordered($gradientColor) {
+@mixin button-bordered($gradientColor) {
 	background: $white;
 	border-color: map-get($palette, $gradientColor);
 	color: map-get($palette, $gradientColor);

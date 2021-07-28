@@ -1,5 +1,5 @@
 $rem-size: 12;
 
-@mixin getRemInDp($property, $rems) {
+@mixin get-rem-in-dp($property, $rems) {
 	#{$property}: $rems * $rem-size;
 }

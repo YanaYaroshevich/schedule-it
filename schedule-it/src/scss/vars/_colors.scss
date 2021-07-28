@@ -22,3 +22,183 @@ $gradient: (
 	'purple': linear-gradient(180deg, map-get($palette, 'purple') 0%, map-get($palette, 'blue') 100%),
 	'green': linear-gradient(180deg, map-get($palette, 'green') 0%, map-get($palette, 'aqua') 100%)
 );
+
+$primary-settings: (
+	50: #e3e8ec,
+	100: #b8c6cf,
+	200: #89a0af,
+	300: #5a7a8e,
+	400: #365e76,
+	500: #13415e,
+	600: #113b56,
+	700: #0e324c,
+	800: #0b2a42,
+	900: #061c31,
+	A100: #6aaeff,
+	A200: #3792ff,
+	A400: #0476ff,
+	A700: #006aea,
+	contrast: (
+		50: $black-87-opacity,
+		100: $black-87-opacity,
+		200: $black-87-opacity,
+		300: $black-87-opacity,
+		400: $black-87-opacity,
+		500: white,
+		600: white,
+		700: white,
+		800: $white-87-opacity,
+		900: $white-87-opacity,
+		A100: $black-87-opacity,
+		A200: white,
+		A400: white,
+		A700: white
+	)
+);
+$mdm-accent-settings: (
+	50: #e3f1ec,
+	100: #b9ddd0,
+	200: #8bc6b1,
+	300: #5caf92,
+	400: #399e7a,
+	500: #168d63,
+	600: #13855b,
+	700: #107a51,
+	800: #0c7047,
+	900: #065d35,
+	A100: #8fffc5,
+	A200: #5cffab,
+	A400: #29ff91,
+	A700: #0fff84,
+	contrast: (
+		50: $black-87-opacity,
+		100: $black-87-opacity,
+		200: $black-87-opacity,
+		300: $black-87-opacity,
+		400: $black-87-opacity,
+		500: white,
+		600: white,
+		700: white,
+		800: $white-87-opacity,
+		900: $white-87-opacity,
+		A100: $black-87-opacity,
+		A200: white,
+		A400: white,
+		A700: white
+	)
+);
+$mdm-warn-settings: (
+	50: #fcf3e4,
+	100: #f9e1bb,
+	200: #f5cd8e,
+	300: #f0b960,
+	400: #edaa3e,
+	500: #ea9b1c,
+	600: #e79319,
+	700: #e48914,
+	800: #e17f11,
+	900: #db6d09,
+	A100: #ffffff,
+	A200: #ffe5d2,
+	A400: #ffc89f,
+	A700: #ffba85,
+	contrast: (
+		50: $black-87-opacity,
+		100: $black-87-opacity,
+		200: $black-87-opacity,
+		300: $black-87-opacity,
+		400: $black-87-opacity,
+		500: white,
+		600: white,
+		700: white,
+		800: $white-87-opacity,
+		900: $white-87-opacity,
+		A100: $black-87-opacity,
+		A200: white,
+		A400: white,
+		A700: white
+	)
+);
+// mdm primary settings
+$mdm-app-primary-palette: $mdm-primary-settings;
+$mdm-app-primary-default: 500;
+$mdm-app-primary-lighter: 300;
+$mdm-app-primary-darker: 900;
+// mdm accent settings
+$mdm-app-accent-palette: $mdm-accent-settings;
+$mdm-app-accent-default: 500;
+$mdm-app-accent-lighter: 300;
+$mdm-app-accent-darker: 900;
+// mdm warn settings
+$mdm-app-warn-palette: $mdm-warn-settings;
+$mdm-app-warn-default: 500;
+$mdm-app-warn-lighter: 300;
+$mdm-app-warn-darker: 900;
+$mdm-app-primary: mat-palette(
+		$mdm-app-primary-palette,
+		$mdm-app-primary-default,
+		$mdm-app-primary-lighter,
+		$mdm-app-primary-darker
+);
+$mdm-app-accent: mat-palette(
+		$mdm-app-accent-palette,
+		$mdm-app-accent-default,
+		$mdm-app-accent-lighter,
+		$mdm-app-accent-darker
+);
+$mdm-app-warn: mat-palette($mdm-app-warn-palette, $mdm-app-warn-default, $mdm-app-warn-lighter, $mdm-app-warn-darker);
+$mdm-dark-theme-foreground: (
+	base: $white,
+	divider: $light-dividers,
+	dividers: $light-dividers,
+	disabled: $light-disabled-text,
+	disabled-button: rgba($white, 0.3),
+	disabled-text: $light-disabled-text,
+	elevation: $black,
+	// todo hint-text: $light-disabled-text,
+	secondary-text: $light-secondary-text,
+	icon: $white,
+	icons: $white,
+	text: $white,
+	slider-min: $white,
+	slider-off: rgba($white, 0.3),
+	slider-off-active: rgba($white, 0.3)
+);
+// todo: review places with $mat-grey and $black in new added material components
+$mdm-dark-theme-background: (
+	status-bar: $black,
+	app-bar: map_get($mat-grey, 900),
+	background: $base-bg-color,
+	hover: rgba($white, 0.04),
+	dialog: map_get($mat-grey, 800),
+	disabled-button: rgba($white, 0.12),
+	raised-button: map-get($mat-grey, 800),
+	focused-button: $light-focused,
+	selected-button: map_get($mat-grey, 900),
+	selected-disabled-button: map_get($mat-grey, 800),
+	disabled-button-toggle: $black,
+	unselected-chip: map_get($mat-grey, 700),
+	disabled-list-option: $black,
+	card: $base-bg-color
+);
+@function mdm-theme($primary, $accent, $warn: mat-palette($mat-red)) {
+	@return (
+		primary: $primary,
+		accent: $accent,
+		warn: $warn,
+		is-dark: true,
+		foreground: $mdm-dark-theme-foreground,
+		background: $mdm-dark-theme-background
+	);
+}
+$mdm-app-theme: mdm-theme($mdm-app-primary, $mdm-app-accent, $mdm-app-warn);
+@include angular-material-theme($mdm-app-theme);
+$primary: map-get($mdm-app-primary-palette, $mdm-app-primary-default);
+$accent: map-get($mdm-app-accent-palette, $mdm-app-accent-default);
+$warn: map-get($mdm-app-warn-palette, $mdm-app-warn-default);
+$primary-lighter: map-get($mdm-app-primary-palette, $mdm-app-primary-lighter);
+$accent-lighter: map-get($mdm-app-accent-palette, $mdm-app-accent-lighter);
+$warn-lighter: map-get($mdm-app-warn-palette, $mdm-app-warn-lighter);
+$primary-darker: map-get($mdm-app-primary-palette, $mdm-app-primary-darker);
+$accent-darker: map-get($mdm-app-accent-palette, $mdm-app-accent-darker);
+$warn-darker: map-get($mdm-app-warn-palette, $mdm-app-warn-darker);

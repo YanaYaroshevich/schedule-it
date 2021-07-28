@@ -1,3 +1,25 @@
+@import '~@angular/material/theming';
+@import 'vars/fonts';
+
+// https://material.angular.io/guide/typography
+$custom-typography: mat-typography-config(
+	$font-family: $montserrat-font,
+	$display-4: mat-typography-level($mat-display-4-font-size, $mat-display-4-font-size, 300),
+	$display-3: mat-typography-level($mat-display-3-font-size, $mat-display-3-font-size, 400),
+	$display-2: mat-typography-level($mat-display-2-font-size, $mat-display-2-font-size * 1.07, 400),
+	$display-1: mat-typography-level($mat-display-1-font-size, $mat-display-1-font-size * 1.18, 400),
+	$headline: mat-typography-level($mat-headline-font-size, $mat-headline-font-size * 1.33, 400),
+	$title: mat-typography-level($mat-body-1-font-size, $mat-body-1-font-size * 1.6, 400),
+	$subheading-2: mat-typography-level($mat-subheading-2-font-size, $mat-subheading-2-font-size * 1.75, 400),
+	$subheading-1: mat-typography-level($mat-subheading-1-font-size, $mat-subheading-1-font-size * 1.6, 400),
+	$body-2: mat-typography-level($mat-body-2-font-size, $mat-body-2-font-size * 1.7, 400),
+	$body-1: mat-typography-level($mat-body-1-font-size, $mat-body-1-font-size * 1.43, 400),
+	$caption: mat-typography-level($mat-caption-font-size, $mat-caption-font-size * 1.67, 400),
+	$button: mat-typography-level($mat-subheading-1-font-size, 2.5 * $mat-subheading-1-font-size, 500)
+);
+
+@include mat-core($custom-typography);
+
 @mixin font-smoothing {
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;

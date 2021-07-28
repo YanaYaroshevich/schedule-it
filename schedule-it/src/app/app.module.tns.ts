@@ -11,6 +11,7 @@ import {AppRoutingModule} from '@src/app/app-routing.module';
 import {AppComponent} from '@src/app/app.component';
 import {IntroModule} from '@src/app/pages/intro/intro.module.tns';
 import {HomeModule} from '@src/app/pages/home/home.module.tns';
+import {LoginModule} from '@src/app/pages/login/login.module';
 
 // Uncomment and add to NgModule imports if you need to use two-way binding
 // import { NativeScriptFormsModule } from 'nativescript-angular/forms';
@@ -30,7 +31,15 @@ if (applicationModule.android) {
 
 @NgModule({
 	declarations: [AppComponent],
-	imports: [NativeScriptModule, AppRoutingModule, IntroModule, TNSImageModule, NativeScriptSvgModule, HomeModule],
+	imports: [
+		NativeScriptModule,
+		AppRoutingModule,
+		IntroModule,
+		TNSImageModule,
+		NativeScriptSvgModule,
+		HomeModule,
+		LoginModule
+	],
 	providers: [],
 	bootstrap: [AppComponent],
 	schemas: [NO_ERRORS_SCHEMA]
